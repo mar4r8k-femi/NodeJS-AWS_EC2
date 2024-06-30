@@ -38,6 +38,9 @@ app.use("/api/products", (req, res) => {
   })
 });
 
+// MongoDB connection
+const client = new MongoClient(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
+
 // Get other database and collection
 const database = client.db('sample_mflix');
 const collection = database.collection('movies');
