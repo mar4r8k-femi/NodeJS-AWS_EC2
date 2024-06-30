@@ -1,4 +1,4 @@
-FROM gitpod/workspace-base
+FROM gitpod/workspace-full
 
 # Install Node.js LTS
 RUN sudo apt update \
