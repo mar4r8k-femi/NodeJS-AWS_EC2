@@ -38,24 +38,6 @@ app.use("/api/products", (req, res) => {
   })
 });
 
-// MongoDB connection
-const client = new MongoClient(config.mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
-
-// Get other database and collection
-const database = client.db('sample_mflix');
-const collection = database.collection('movies');
-
-// Route to fetch data
-app.get('/api/data', async (req, res) => {
-    try {
-        const data = await collection.find({}).toArray();
-        res.status(200).json(data);
-    } catch (err) {
-        console.error(err);
-        res.status(500).json({ message: 'Internal Server Error' });
-    }
-});
-
 app.use(errorHandler);
 
 const server = app.listen(port, () =>
