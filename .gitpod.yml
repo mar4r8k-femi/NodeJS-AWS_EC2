@@ -2,9 +2,6 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
-  - init: |
-      echo "Installing Node.js dependencies..."
-      npm install
   - name: Start App
     command: |
       echo "Starting Node.js application..."
