@@ -1,0 +1,17 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: |
+      echo "Installing Node.js dependencies..."
+      npm install
+  - name: Start App
+    command: |
+      echo "Starting Node.js application..."
+      npm run start
+
+ports:
+  - port: 5000
+    onOpen: ignore  # Ignore direct access to Node.js port
+
+
