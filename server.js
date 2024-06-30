@@ -34,7 +34,7 @@ app.use("/api/users", userRoutes);
 
 app.use("/api/products", (req, res) => {
   return res.status(200).json({
-    message: 'This is new feature change, a new route for products'
+    message: 'This is new feature change, a new approach to enablement'
   })
 });
 
